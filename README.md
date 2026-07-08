@@ -33,6 +33,10 @@ The `.agent-context` directory is intentionally ignored by Git. It is a local wo
 4. Record assumptions, commands, observations, and next steps.
 5. Open issues for follow-up work that should survive beyond the current session.
 
+## Guides
+
+- [Hermes Agent beginner guide, Korean](docs/hermes-agent-beginner-guide-ko.md): detailed copy-paste setup and first-use guide for Windows, macOS, and Ubuntu.
+
 ## Repository Layout
 
 - `AGENTS.md`: project instructions for AI coding agents.
