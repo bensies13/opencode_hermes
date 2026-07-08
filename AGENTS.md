@@ -2,9 +2,9 @@
 
 This repository is an open-source autonomous AI agent experiment lab. Treat the GitHub repository as the source of truth for current project context.
 
-## Required Start-of-Work Routine
+## Required Conversation-Start Routine
 
-Before making changes or giving implementation advice:
+At the start of a new conversation or work session in this repository, before making project-specific changes:
 
 1. Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-context.ps1`.
 2. Read `.agent-context/latest.md`.
@@ -12,6 +12,8 @@ Before making changes or giving implementation advice:
 4. If the script reports skipped sync because the worktree is dirty, do not overwrite local changes. Fetch-only context is acceptable until the user decides what to do.
 
 The refresh script may fast-forward the current branch only when the worktree is clean and an upstream branch exists. It must not rebase, merge, reset, or discard user work.
+
+Do not set up scheduled or background context refresh jobs unless the user explicitly asks for them.
 
 ## Project Priorities
 

@@ -18,3 +18,4 @@ This file stores stable project context that should remain useful across session
 | Date | Decision | Reason |
 | --- | --- | --- |
 | 2026-07-08 | Use GitHub as the source of truth and generate local agent context with `scripts/update-context.ps1`. | Keeps Codex/OpenCode sessions aligned with the latest remote state without creating noisy commits. |
+| 2026-07-08 | Do not run scheduled context refresh by default; check context only when a project conversation or work session starts. | Avoids unnecessary background work while still giving agents current context at the moment they begin working. |

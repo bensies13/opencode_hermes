@@ -8,12 +8,12 @@ This repository is for comparing, adapting, and testing open-source autonomous a
 
 - Track useful open-source autonomous agent patterns.
 - Run small, reversible experiments before promoting anything to a larger implementation.
-- Keep agent context current with the GitHub repository before each work session.
+- Check agent context against the GitHub repository at the beginning of each project conversation or work session.
 - Record hypotheses, outcomes, and follow-up tasks in a format future agents can reuse.
 
 ## Context Refresh
 
-GitHub is the source of truth for this project. Before starting work, run:
+GitHub is the source of truth for this project. At the start of a new conversation or work session in this project, run:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-context.ps1
@@ -21,11 +21,13 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-context.ps1
 
 The script fetches the latest repository state, fast-forwards the local branch when it is safe, and writes a local context snapshot to `.agent-context/latest.md`.
 
+This is a session-start check, not a scheduled background refresh.
+
 The `.agent-context` directory is intentionally ignored by Git. It is a local working memory cache for Codex, OpenCode, and other agents, not project history.
 
 ## Experiment Flow
 
-1. Refresh context with `scripts/update-context.ps1`.
+1. At session start, refresh context with `scripts/update-context.ps1`.
 2. Create or update an experiment note under `experiments/`.
 3. Keep changes small enough to inspect.
 4. Record assumptions, commands, observations, and next steps.
